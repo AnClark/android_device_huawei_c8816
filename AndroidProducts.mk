@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_c8816.mk
+    $(LOCAL_DIR)/omni_c8816.mk

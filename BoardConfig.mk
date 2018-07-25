@@ -50,6 +50,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_PREBUILT_KERNEL := device/huawei/c8816/kernel
+#TARGET_KERNEL_SOURCE := kernel/huawei/msm8610
+#TARGET_KERNEL_CONFIG := 
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := device/huawei/c8816/ramdisk/fstab.qcom
@@ -61,3 +63,10 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun%d
 BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 BOARD_RECOVERY_SWIPE := true
+
+# TWRP
+# TODO: Remove partition `grow`, and merge it into `userdata`
+RECOVERY_SDCARD_ON_DATA := false
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
